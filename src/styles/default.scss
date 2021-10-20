@@ -3,6 +3,7 @@ $maxWidth: 1920px;
 $containerWidth: 1140px;
 $bgColour: #fff;
 $headlineColour: red;
+$mainFont: Ubuntu;
 
 html,
 body {
@@ -86,10 +87,3 @@ button {
 }
 
 /* ========================================== */
-/* own styles */
-#main-headline {
-    font-size: 42px;
-    color: $headlineColour;
-    text-align: center;
-    margin-top: 20px;
-}

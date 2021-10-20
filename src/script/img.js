@@ -1,0 +1,13 @@
+import myImg from '../img/calmness.webp';
+const putPicOne = document.querySelector('#put-pic-one');
+const putPicTwo = document.querySelector('#put-pic-two');
+const putPicThree = document.querySelector('#put-pic-three');
+const myImg1 = new Image();
+const myImg2 = new Image();
+const myImg3 = new Image();
+myImg1.src = myImg;
+myImg2.src = myImg;
+myImg3.src = myImg;
+putPicOne.append(myImg1);
+putPicTwo.append(myImg2);
+putPicThree.append(myImg3);

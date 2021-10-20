@@ -7,6 +7,36 @@
         <title><%= htmlWebpackPlugin.options.title %></title>
     </head>
     <body>
-        <div id="app" class="container mx-auto px-3"></div>
+        <div id="app" class="app">
+            <header id="header" class="header">
+                <label for="search"></label>
+                <input title="search" class="header__input" type="text" name="" id="search" />
+                <button type="button" class="header__btn btn" id="searchBtn">Search</button>
+            </header>
+            <div class="favourite">
+                <h3 class="favourite__headline">Favourite Meals</h3>
+                <ul class="favourite__list">
+                    <li id="put-pic-one">
+                        <span>Meal 1</span>
+                    </li>
+                    <li id="put-pic-two">
+                        <span>Meal 2</span>
+                    </li>
+                    <li id="put-pic-three">
+                        <span>Meal 3</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="meals">
+                <span class="random">Random Recipe</span>
+                <article class="meal">
+                    <div class="meal__header"></div>
+                    <div class="meal__body">
+                        <h5>Meal</h5>
+                        <button type="button">Press</button>
+                    </div>
+                </article>
+            </div>
+        </div>
     </body>
 </html>
