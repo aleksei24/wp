@@ -9,3 +9,4 @@ import './styles/index.scss';
 // import './script/vibes';
 // import './script/getData';
 import './script/img';
+import './script/app';
