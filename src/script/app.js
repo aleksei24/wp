@@ -1,25 +1,31 @@
 const meals = document.querySelector('#meals');
+const search = document.querySelector('#search');
+const searchBtn = document.querySelector('#searchBtn');
 
 function getRandomMeal() {
     try {
-        const resp = fetch('https://www.themealdb.com/api/json/v1/1/random.php').then((responce) =>
-            responce.json().then((data) => {
+        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+            .then((responce) => responce.json())
+            .then((data) => {
                 const randomMeal = data.meals[0];
                 console.log(randomMeal);
                 addMeal(randomMeal, true);
-            })
-        );
+            });
     } catch (err) {
         console.error(err);
     }
 }
 
-function getMealById(id) {
-    const meal = fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id);
-}
-
-function getMealsBySearch(term) {
-    const meals = fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + term);
+function getMealsBySearch(meal) {
+    try {
+        fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + meal)
+            .then((responce) => responce.json())
+            .then((data) => {
+                console.log(data);
+            });
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function addMeal(mealData, random = false) {
@@ -46,3 +52,9 @@ function addMeal(mealData, random = false) {
 
 // ========================================
 getRandomMeal();
+// getMealsBySearch();
+
+searchBtn.addEventListener('click', () => {
+    const searchValue = search.value;
+    const meals = getMealsBySearch(searchValue);
+});

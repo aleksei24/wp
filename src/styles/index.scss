@@ -43,7 +43,12 @@
             height: 80px;
         }
         & > li > span {
+            display: inline-block;
             text-transform: lowercase;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 70px;
         }
     }
 }
@@ -71,6 +76,12 @@
         padding: 10px;
         h5 {
             margin: 0;
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            padding: 0 5px;
         }
         button {
             padding: 4px 8px;
