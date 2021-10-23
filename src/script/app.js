@@ -52,9 +52,13 @@ function addMeal(mealData, random = false) {
 
 // ========================================
 getRandomMeal();
-// getMealsBySearch();
+getMealsBySearch();
 
 searchBtn.addEventListener('click', () => {
-    const searchValue = search.value;
+    let searchValue = search.value;
     const meals = getMealsBySearch(searchValue);
+    // search.value = '';
+    meals.forEach((elem) => {
+        addMeal(elem);
+    });
 });
