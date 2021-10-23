@@ -23,34 +23,8 @@
     }
 }
 
-.favourite {
-    padding: 15px 0;
-    &__headline {
-        text-align: center;
-    }
-    &__list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 0;
-        overflow: auto;
-        & > li {
-            text-align: center;
-        }
-        & > li > img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-        }
-        & > li > span {
-            display: inline-block;
-            text-transform: lowercase;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 70px;
-        }
-    }
+.meals {
+    margin: 1.5rem 0;
 }
 
 .meal {

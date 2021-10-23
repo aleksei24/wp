@@ -8,5 +8,5 @@ import './styles/index.scss';
 // script
 // import './script/vibes';
 // import './script/getData';
-import './script/img';
+// import './script/img';
 import './script/app';
