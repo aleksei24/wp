@@ -1,5 +1,5 @@
-const meals = document.querySelector('#meals');
-const search = document.querySelector('#search');
+const mealsElem = document.querySelector('#meals');
+const searchInput = document.querySelector('#search');
 const searchBtn = document.querySelector('#searchBtn');
 
 async function getRandomMeal() {
@@ -14,13 +14,12 @@ async function getRandomMeal() {
   }
 }
 
-function getMealsBySearch(meal) {
+async function getMealsBySearch(meal) {
   try {
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + meal)
-      .then((responce) => responce.json())
-      .then((data) => {
-        console.log(data);
-      });
+    const resp = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + meal);
+    const respData = await resp.json();
+    const meals = await respData.meals;
+    return meals;
   } catch (error) {
     console.error(error);
   }
@@ -36,14 +35,8 @@ function addMeal(mealData, random = false) {
     </div>
     <div class="meal__body">
       <h5>${mealData.strMeal}</h5>
-      <button type="button">Press</button>
     </div>
     `;
-
-  const favBtn = meal.querySelector('.meal__body button');
-  favBtn.addEventListener('click', () => {
-    favBtn.classList.toggle('active');
-  });
 
   meals.appendChild(meal);
 }
@@ -52,11 +45,15 @@ function addMeal(mealData, random = false) {
 getRandomMeal();
 getMealsBySearch();
 
-searchBtn.addEventListener('click', () => {
-  let searchValue = search.value;
-  const meals = getMealsBySearch(searchValue);
-  // search.value = '';
-  meals.forEach((elem) => {
-    addMeal(elem);
-  });
+searchBtn.addEventListener('click', async () => {
+  mealsElem.innerHTML = '';
+  const search = searchInput.value;
+  const meals = await getMealsBySearch(search);
+  searchInput.value = '';
+
+  if (meals) {
+    meals.forEach((elem) => {
+      addMeal(elem);
+    });
+  }
 });
