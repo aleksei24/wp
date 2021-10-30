@@ -7,83 +7,83 @@ $mainFont: Ubuntu;
 
 html,
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    min-width: $minWidth;
-    position: relative;
-    color: #151515;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: $minWidth;
+  position: relative;
+  color: #151515;
 }
 body {
-    font-size: 16px;
-    background-color: $bgColour;
-    font-weight: normal;
+  font-size: 16px;
+  background-color: $bgColour;
+  font-weight: normal;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    position: relative;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    list-style-type: none;
-    text-decoration: none;
-    /* outline: 1px solid red; */
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  /* outline: 1px solid red; */
 }
 a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 a:focus,
 a:active {
-    outline: none;
+  outline: none;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 input,
 button,
 textarea {
-    font-family: $mainFont;
+  font-family: $mainFont;
 }
 button {
-    cursor: pointer;
-    border-radius: 5px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    color: grey;
-    background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  color: grey;
+  background-color: orangered;
 }
 .wrapper {
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    max-width: $maxWidth;
-    margin: 0 auto;
-    background-color: $bgColour;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  background-color: $bgColour;
 }
 .container {
-    max-width: 1140px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1140px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* ========================================== */
