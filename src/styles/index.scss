@@ -41,7 +41,6 @@
     }
     img {
       width: 100%;
-      height: 300px;
     }
   }
   &__body {
@@ -63,4 +62,50 @@
       border: 1px grey solid;
     }
   }
+}
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.popup {
+  background-color: #fff;
+  max-width: 380px;
+  width: 100%;
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: auto;
+  & .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 4px 7px;
+  }
+  h2 {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+.meal-info ul {
+  padding: 10px 0;
+}
+.meal-info li {
+  font-size: 14px;
 }
