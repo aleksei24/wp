@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/aleksei24/webpack#readme",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.0",
     "autoprefixer": "^10.3.4",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
@@ -51,6 +52,7 @@
   "dependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
+    "@babel/runtime": "^7.16.0",
     "babel-loader": "^8.2.2"
   }
 }

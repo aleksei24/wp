@@ -2,15 +2,13 @@ const meals = document.querySelector('#meals');
 const search = document.querySelector('#search');
 const searchBtn = document.querySelector('#searchBtn');
 
-function getRandomMeal() {
+async function getRandomMeal() {
   try {
-    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-      .then((responce) => responce.json())
-      .then((data) => {
-        const randomMeal = data.meals[0];
-        console.log(randomMeal);
-        addMeal(randomMeal, true);
-      });
+    const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+    const respData = await resp.json();
+    const randomMeal = respData.meals[0];
+    console.log(randomMeal);
+    addMeal(randomMeal, true);
   } catch (err) {
     console.error(err);
   }
